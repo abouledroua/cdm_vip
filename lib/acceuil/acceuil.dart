@@ -90,7 +90,7 @@ class _PageAcceuilState extends State<PageAcceuil> {
                               Center(
                                   child: SizedBox(
                                       height: Data.heightScreen / 5,
-                                      child: Image.asset("images/logo.png",
+                                      child: Image.asset("images/logo_mini.png",
                                           fit: BoxFit.cover))),
                               const SizedBox(height: 10),
                               Center(

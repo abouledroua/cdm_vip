@@ -72,7 +72,7 @@ class _WelcomePageState extends State<WelcomePage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Center(
-                          child: Image.asset("images/logo.png",
+                          child: Image.asset("images/logo_mini.png",
                               fit: BoxFit.cover)),
                       const SizedBox(height: 20),
                       Text("حرفيــون .. جميعهم بين يديك",
