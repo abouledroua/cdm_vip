@@ -22,6 +22,7 @@ dependencies:
   rename: ^2.0.1
   provider: ^6.0.3
   device_info_plus: ^3.2.3
+  icons_launcher: ^1.2.1
   flutter_localizations:
     sdk: flutter
 
@@ -33,7 +34,7 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "images/CDM.jpg"
+  image_path: "images/logo.png"
   
   flutter_lints: ^2.0.0
 
