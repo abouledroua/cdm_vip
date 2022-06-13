@@ -65,15 +65,21 @@ class _WelcomePageState extends State<WelcomePage> {
     return SafeArea(
         child: Scaffold(
             resizeToAvoidBottomInset: true,
-            body: Padding(
+            body: Container(
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.fill,
+                        image: AssetImage("images/artisan_opacity.png"))),
                 padding: const EdgeInsets.all(16),
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Center(
-                          child: Image.asset("images/logo_mini.png",
-                              fit: BoxFit.cover)),
+                          child: SizedBox(
+                              width: Data.widthScreen / 3,
+                              height: Data.heightScreen / 3,
+                              child: Image.asset("images/logo_mini.png"))),
                       const SizedBox(height: 20),
                       Text("حرفيــون .. جميعهم بين يديك",
                           style: GoogleFonts.actor())

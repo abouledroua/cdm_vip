@@ -71,122 +71,100 @@ class _PageAcceuilState extends State<PageAcceuil> {
                             constraints:
                                 BoxConstraints(maxWidth: Data.maxWidth),
                             padding: const EdgeInsets.all(16),
-                            child: ListView(children: [
-                              Row(children: [
-                                languageWidget(context),
-                                const Spacer(),
-                                InkWell(
-                                    onTap: () {},
-                                    child: Ink(
-                                        child: Text(
-                                            AppLocalizations.of(context)!
-                                                .txtLoginAdmin,
-                                            style: GoogleFonts.adamina(
-                                                decoration:
-                                                    TextDecoration.underline,
-                                                fontWeight: FontWeight.bold))))
-                              ]),
-                              const SizedBox(height: 10),
-                              Center(
-                                  child: SizedBox(
-                                      height: Data.heightScreen / 5,
-                                      child: Image.asset("images/logo_mini.png",
-                                          fit: BoxFit.cover))),
-                              const SizedBox(height: 10),
-                              Center(
-                                  child: Text(
-                                      AppLocalizations.of(context)!.txtWelcome,
-                                      style: GoogleFonts.abel(
-                                          color: Colors.brown,
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 26))),
-                              const SizedBox(height: 16),
-                              Padding(
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: Data.widthScreen / 10),
-                                  child: Wrap(
-                                      alignment: WrapAlignment.center,
-                                      children: [
-                                        Text(
-                                            AppLocalizations.of(context)!
-                                                .txtSujetWelcome,
-                                            textAlign: TextAlign.center,
-                                            style: GoogleFonts.abel(
-                                                color: Colors.black54,
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 14))
-                                      ])),
-                              const SizedBox(height: 16),
-                              InkWell(
-                                  onTap: () => () {},
-                                  child: Ink(
-                                      child: Container(
-                                          padding: const EdgeInsets.all(8),
-                                          margin: EdgeInsets.symmetric(
-                                              horizontal: Data.widthScreen / 9),
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              border: Border.all(
-                                                  color: Colors.grey),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(20))),
-                                          child: Center(
-                                              child: Text(
-                                                  wilaya.isEmpty
-                                                      ? AppLocalizations.of(context)!
-                                                          .txtChoixWilaya
-                                                      : wilaya,
-                                                  style: GoogleFonts.abel(
-                                                      color: wilaya.isEmpty
-                                                          ? Colors.grey
-                                                          : Colors.black)))))),
-                              const SizedBox(height: 4),
-                              InkWell(
-                                  onTap: () => () {},
-                                  child: Ink(
-                                      child: Container(
-                                          padding: const EdgeInsets.all(8),
-                                          margin: EdgeInsets.symmetric(
-                                              horizontal: Data.widthScreen / 9),
-                                          decoration: BoxDecoration(
-                                              color: Colors.white,
-                                              border: Border.all(
-                                                  color: Colors.grey),
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(20))),
-                                          child: Center(
-                                              child: Text(
-                                                  AppLocalizations.of(context)!
-                                                      .txtChoixMetier,
-                                                  style: GoogleFonts.abel(
-                                                      color: Colors.black)))))),
-                              const SizedBox(height: 16),
-                              Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 8, vertical: 12),
-                                  margin: EdgeInsets.symmetric(
-                                      horizontal: Data.widthScreen / 9),
-                                  decoration: BoxDecoration(
-                                      gradient: LinearGradient(colors: [
-                                        Colors.red.shade900,
-                                        Colors.orange.shade500,
-                                        Colors.red.shade900
-                                      ]),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.circular(25))),
-                                  child: InkWell(
-                                      onTap: () {
-                                       
-                                      },
-                                      child: Ink(
-                                          child: Center(
-                                              child: Text(
-                                                  AppLocalizations.of(context)!
-                                                      .txtStart,
-                                                  style: GoogleFonts.abel(
-                                                      fontSize: 26,
-                                                      color: Colors.white))))))
-                            ])))))));
+                            child: bodyContent(context)))))));
+  }
+
+  ListView bodyContent(BuildContext context) {
+    return ListView(children: [
+      Row(children: [
+        languageWidget(context),
+        const Spacer(),
+        InkWell(
+            onTap: () {},
+            child: Ink(
+                child: Text(AppLocalizations.of(context)!.txtLoginAdmin,
+                    style: GoogleFonts.adamina(
+                        decoration: TextDecoration.underline,
+                        fontWeight: FontWeight.bold))))
+      ]),
+      const SizedBox(height: 10),
+      Center(
+          child: SizedBox(
+              height: Data.heightScreen / 5,
+              child: Image.asset("images/logo_mini.png", fit: BoxFit.cover))),
+      const SizedBox(height: 10),
+      Center(
+          child: Text(AppLocalizations.of(context)!.txtWelcome,
+              style: GoogleFonts.abel(
+                  color: Colors.brown,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 26))),
+      const SizedBox(height: 16),
+      Padding(
+          padding: EdgeInsets.symmetric(horizontal: Data.widthScreen / 10),
+          child: Wrap(alignment: WrapAlignment.center, children: [
+            Text(AppLocalizations.of(context)!.txtSujetWelcome,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.abel(
+                    color: Colors.black54,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14))
+          ])),
+      const SizedBox(height: 16),
+      InkWell(
+          onTap: () => () {},
+          child: Ink(
+              child: Container(
+                  padding: const EdgeInsets.all(8),
+                  margin:
+                      EdgeInsets.symmetric(horizontal: Data.widthScreen / 9),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Center(
+                      child: Text(
+                          wilaya.isEmpty
+                              ? AppLocalizations.of(context)!.txtChoixWilaya
+                              : wilaya,
+                          style: GoogleFonts.abel(
+                              color: wilaya.isEmpty
+                                  ? Colors.grey
+                                  : Colors.black)))))),
+      const SizedBox(height: 4),
+      InkWell(
+          onTap: () => () {},
+          child: Ink(
+              child: Container(
+                  padding: const EdgeInsets.all(8),
+                  margin:
+                      EdgeInsets.symmetric(horizontal: Data.widthScreen / 9),
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      border: Border.all(color: Colors.grey),
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Center(
+                      child: Text(AppLocalizations.of(context)!.txtChoixMetier,
+                          style: GoogleFonts.abel(color: Colors.black)))))),
+      const SizedBox(height: 16),
+      Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+          margin: EdgeInsets.symmetric(horizontal: Data.widthScreen / 9),
+          decoration: BoxDecoration(
+              gradient: LinearGradient(colors: [
+                Colors.red.shade900,
+                Colors.orange.shade500,
+                Colors.red.shade900
+              ]),
+              borderRadius: BorderRadius.all(Radius.circular(25))),
+          child: InkWell(
+              onTap: () {},
+              child: Ink(
+                  child: Center(
+                      child: Text(AppLocalizations.of(context)!.txtStart,
+                          style: GoogleFonts.abel(
+                              fontSize: 26, color: Colors.white))))))
+    ]);
   }
 
   Row languageWidget(BuildContext context) => Row(children: [
