@@ -20,11 +20,27 @@ class Data {
       isLandscape = false,
       isPortrait = false;
   static int timeOut = 0;
+  static Gradient adminColor = LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Colors.indigoAccent.shade700,
+            Colors.indigoAccent.shade200,
+            Colors.indigoAccent.shade700
+          ]),
+      userColor = LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [
+            Colors.deepOrange.shade700,
+            Colors.deepOrange.shade300,
+            Colors.deepOrange.shade700
+          ]);
   static double minTablet = 450, maxWidth = 800;
   static double widthScreen = double.infinity;
   static late double heightScreen;
   static late double heightmyAppBar;
-  static String www = "CDM/WWW";
+  static String www = "CDM_VIP/WWW";
   static int index = 0;
   static late BuildContext myContext;
   static List<Color> darkColor = [

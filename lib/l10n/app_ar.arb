@@ -1,5 +1,8 @@
 {
     "txtLangue" : "اللغة : ",
+    "txtIam" : "الدخول بصفتـي",
+    "txtIamCraftsMan" : "حرفي",
+    "txtIamUser" : "مستخدم",
     "txtSMS" : "رسالة نصية",
     "txtAppeler" : "إتصل",
     "txtSendEmail" : "رسالة إلكترونية",
@@ -41,7 +44,7 @@
     "txtErrAcceuil": "الرجاء اختيار الولاية والمهنة",
     "txtErrSearchWilaya": "يرجى إختيار الولاية",
     "txtchooseSpecialite": "يرجى إختيار المهنـة",    
-    "txtTitreLogin": "دخول الأدمن",
+    "txtTitreLogin": "صفحة تسجيل الدخول",
     "txtErrExisteDeja": "هذا التسجيل موجود بالفعل !!! !!! ",
     "txtErrChampsObligatoire": "يرجى تعبئة جميع الخانات الإجبارية !!! ",
     "txtErrDesSpecialite": "الرجاء إدخال التسمية !!!",
@@ -62,7 +65,8 @@
     "txtProblemeCodeAccess" : "رمز الدخول غير صحيح !!!",
     "txtValidationEnCours" : "جـار حفط البيانات ...",
     "txtConnexionEnCours" : "جار الإتصال ...",
-    "txtCodeAccess" : "رمز الدخول",
+    "txtUserName" : "رقم الهاتف أو البريـد الإلكتروني",
+    "txtPassword" : "كلمـة المرور",
     "txtChoixWilaya" : "إختر ولاية",
     "txtChoixMetier" : "إختر مهنة",
     "txtSujetWelcome" : "مرحبا بك في تطبيق الحرفيين. يتضمن هذا التطبيق عددًا من الأيدي العاملة لكافة التخصصات في عدة مدن عدة، وكلها بين يديك"

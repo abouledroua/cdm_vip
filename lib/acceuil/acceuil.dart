@@ -1,3 +1,4 @@
+import 'package:cdm_vip/auth/login.dart';
 import 'package:cdm_vip/classes/data.dart';
 import 'package:cdm_vip/l10n/l10n.dart';
 import 'package:cdm_vip/provider/local_provider.dart';
@@ -76,17 +77,7 @@ class _PageAcceuilState extends State<PageAcceuil> {
 
   ListView bodyContent(BuildContext context) {
     return ListView(children: [
-      Row(children: [
-        languageWidget(context),
-        const Spacer(),
-        InkWell(
-            onTap: () {},
-            child: Ink(
-                child: Text(AppLocalizations.of(context)!.txtLoginAdmin,
-                    style: GoogleFonts.adamina(
-                        decoration: TextDecoration.underline,
-                        fontWeight: FontWeight.bold))))
-      ]),
+      languageWidget(context),
       const SizedBox(height: 10),
       Center(
           child: SizedBox(
@@ -111,57 +102,50 @@ class _PageAcceuilState extends State<PageAcceuil> {
                     fontSize: 14))
           ])),
       const SizedBox(height: 16),
-      InkWell(
-          onTap: () => () {},
-          child: Ink(
-              child: Container(
-                  padding: const EdgeInsets.all(8),
-                  margin:
-                      EdgeInsets.symmetric(horizontal: Data.widthScreen / 9),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
-                  child: Center(
-                      child: Text(
-                          wilaya.isEmpty
-                              ? AppLocalizations.of(context)!.txtChoixWilaya
-                              : wilaya,
-                          style: GoogleFonts.abel(
-                              color: wilaya.isEmpty
-                                  ? Colors.grey
-                                  : Colors.black)))))),
-      const SizedBox(height: 4),
-      InkWell(
-          onTap: () => () {},
-          child: Ink(
-              child: Container(
-                  padding: const EdgeInsets.all(8),
-                  margin:
-                      EdgeInsets.symmetric(horizontal: Data.widthScreen / 9),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      border: Border.all(color: Colors.grey),
-                      borderRadius: BorderRadius.all(Radius.circular(20))),
-                  child: Center(
-                      child: Text(AppLocalizations.of(context)!.txtChoixMetier,
-                          style: GoogleFonts.abel(color: Colors.black)))))),
+      Padding(
+          padding: EdgeInsets.symmetric(horizontal: Data.widthScreen / 10),
+          child: Wrap(alignment: WrapAlignment.center, children: [
+            Text(AppLocalizations.of(context)!.txtIam,
+                textAlign: TextAlign.center,
+                style: GoogleFonts.abel(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 26))
+          ])),
       const SizedBox(height: 16),
       Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
           margin: EdgeInsets.symmetric(horizontal: Data.widthScreen / 9),
           decoration: BoxDecoration(
-              gradient: LinearGradient(colors: [
-                Colors.red.shade900,
-                Colors.orange.shade500,
-                Colors.red.shade900
-              ]),
+              gradient: Data.adminColor,
               borderRadius: BorderRadius.all(Radius.circular(25))),
           child: InkWell(
-              onTap: () {},
+              onTap: () {
+                var route = MaterialPageRoute(
+                    builder: (context) => const LoginPage(type: 2));
+                Navigator.of(context).push(route);
+              },
               child: Ink(
                   child: Center(
-                      child: Text(AppLocalizations.of(context)!.txtStart,
+                      child: Text(AppLocalizations.of(context)!.txtIamCraftsMan,
+                          style: GoogleFonts.abel(
+                              fontSize: 26, color: Colors.white)))))),
+      const SizedBox(height: 16),
+      Container(
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+          margin: EdgeInsets.symmetric(horizontal: Data.widthScreen / 9),
+          decoration: BoxDecoration(
+              gradient: Data.userColor,
+              borderRadius: BorderRadius.all(Radius.circular(25))),
+          child: InkWell(
+              onTap: () {
+                var route = MaterialPageRoute(
+                    builder: (context) => const LoginPage(type: 1));
+                Navigator.of(context).push(route);
+              },
+              child: Ink(
+                  child: Center(
+                      child: Text(AppLocalizations.of(context)!.txtIamUser,
                           style: GoogleFonts.abel(
                               fontSize: 26, color: Colors.white))))))
     ]);

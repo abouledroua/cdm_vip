@@ -3,6 +3,18 @@
     "@txtLangue":{
          "description": "Language : "
     },
+    "txtIam": "Connect as",
+    "@txtIam":{
+         "description": "Connect as"
+    },
+    "txtIamCraftsMan": "CraftsMan",
+    "@txtIamCraftsMan":{
+         "description": "CraftsMan"
+    },
+    "txtIamUser": "User",
+    "@txtIamUser":{
+         "description": "User"
+    },
     "txtOui": "Yes",
     "@txtOui":{
          "description": "Yes"
@@ -99,9 +111,9 @@
     "@txtErreur":{
          "description": "Error"
     },
-     "txtTitreLogin": "Administrator Login",
+     "txtTitreLogin": "Login Page",
     "@txtTitreLogin":{
-         "description": "Administrator Login"
+         "description": "Login Page"
     },
      "txtLoginAdmin": "Login Admin",
     "@txtLoginAdmin":{
@@ -215,9 +227,13 @@
     "@txtbtnConnecter":{
          "description": "Connect"
     },
-     "txtCodeAccess": "Access Code",
-    "@txtCodeAccess":{
-         "description": "Access Code"
+     "txtUserName": "Phone Number Or Email Address",
+    "@txtUserName":{
+         "description": "Phone Number Or Email Address"
+    },
+     "txtPassword": "Password",
+    "@txtPassword":{
+         "description": "Password"
     },
      "txtErrExisteDeja": "This record already exists !!!",
     "@txtErrExisteDeja":{
